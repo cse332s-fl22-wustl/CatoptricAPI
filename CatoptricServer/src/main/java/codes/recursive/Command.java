@@ -7,12 +7,28 @@ public class Command {
     private String direction;
     private String steps;
     private String row;
+    private String column;
+    private String surface;
 
     public String getRow() {
         return row;
     }
     public void setRow(String row) {
         this.row = row;
+    }
+
+    public String getColumn() {
+        return column;
+    }
+    public void setColumn(String column) {
+        this.column = column;
+    }
+
+    public String getSurface() {
+        return surface;
+    }
+    public void setsurface(String surface) {
+        this.surface = surface;
     }
 
     public String getMotor() {

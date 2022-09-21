@@ -47,13 +47,17 @@ public class DefaultController {
         String direction = command.getDirection();
         String steps = command.getSteps();
         String row = command.getRow();
+        String column = command.getColumn();
+        String surface = command.getSurface();
 
         return HttpResponse.ok(
                 CollectionUtils.mapOf(
                     "motor", motor,
                     "direction", direction,
                     "steps", steps,
-                    "row", row
+                    "row", row,
+                    "column", column,
+                    "surface", surface
                     )
         );
     }
