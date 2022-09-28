@@ -8,11 +8,7 @@ To Start the server:
     
 ## CodeDirectory
 The following files contain the code you should be concerned with:
-1. Python Script that control the motor movement: 
-    ```md
-    CatoptricController.py
-    ```
-2. Micronaut server controller that handles http request and calls Python script:
+1. Micronaut server controller that handles http request and calls Python script:
     ```md
     /CatoptricServer/src/main/java/codes/recursive/controller/DefaultController.java
     ```
