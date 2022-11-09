@@ -44,7 +44,6 @@ public class DefaultController {
     public HttpResponse<Map<String, Object>> move(Command command) throws IOException{
 
         String motor = command.getMotor();
-        String direction = command.getDirection();
         String steps = command.getSteps();
         String row = command.getRow();
         String column = command.getColumn();
@@ -53,7 +52,6 @@ public class DefaultController {
         return HttpResponse.ok(
                 CollectionUtils.mapOf(
                     "motor", motor,
-                    "direction", direction,
                     "steps", steps,
                     "row", row,
                     "column", column,

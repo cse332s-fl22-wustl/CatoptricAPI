@@ -4,7 +4,6 @@ import io.micronaut.core.annotation.Introspected;
 @Introspected
 public class Command {
     private String motor;
-    private String direction;
     private String steps;
     private String row;
     private String column;
@@ -43,13 +42,6 @@ public class Command {
     }
     public void setSteps(String steps) {
         this.steps = steps;
-    }
-
-    public String getDirection() {
-        return direction;
-    }
-    public void setDirection(String direction) {
-        this.direction = direction;
     }
 
 }
