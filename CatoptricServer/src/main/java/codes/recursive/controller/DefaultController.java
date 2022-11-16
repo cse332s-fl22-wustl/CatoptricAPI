@@ -9,12 +9,14 @@ import java.io.*;
 import java.util.Map;
 
 import codes.recursive.Command;
+import codes.recursive.JNI.JNI;
 
 @Controller("/")
 public class DefaultController {
 
     @Get(value="test", produces = MediaType.APPLICATION_JSON)
     public HttpResponse<Map<String, Object>> test() throws IOException{
+        new JNI().test();
         return HttpResponse.ok(
             CollectionUtils.mapOf(
                     "status", 0
