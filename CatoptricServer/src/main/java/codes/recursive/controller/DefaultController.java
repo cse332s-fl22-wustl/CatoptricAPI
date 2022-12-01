@@ -47,17 +47,18 @@ public class DefaultController {
 
     @Post(value = "move", consumes = MediaType.APPLICATION_JSON, produces = MediaType.APPLICATION_JSON)
     public HttpResponse<Map<String, Object>> move(Command command) throws IOException{
-
         int motor = command.getMotor();
-        int steps = command.getSteps();
+        int position = command.getPosition();
         int row = command.getRow();
         int column = command.getColumn();
         int surface = command.getSurface();
+        
+        jni.move(motor,position,row,column,surface);
 
         return HttpResponse.ok(
                 CollectionUtils.mapOf(
                     "motor", motor,
-                    "steps", steps,
+                    "position", position,
                     "row", row,
                     "column", column,
                     "surface", surface

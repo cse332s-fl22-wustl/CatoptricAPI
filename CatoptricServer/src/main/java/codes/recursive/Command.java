@@ -4,7 +4,7 @@ import io.micronaut.core.annotation.Introspected;
 @Introspected
 public class Command {
     private int motor;
-    private int steps;
+    private int position;
     private int row;
     private int column;
     private int surface;
@@ -37,11 +37,11 @@ public class Command {
         this.motor = motor;
     }
 
-    public int getSteps() {
-        return steps;
+    public int getPosition() {
+        return this.position;
     }
-    public void setSteps(int steps) {
-        this.steps = steps;
+    public void setPosition(int position) {
+        this.position = position;
     }
 
 }

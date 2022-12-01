@@ -8,4 +8,5 @@ public class JNI {
     public native void test();
     public native void quit();
     public native void reset();
+    public native void move(int motor, int position, int row, int col, int surface);
 }
