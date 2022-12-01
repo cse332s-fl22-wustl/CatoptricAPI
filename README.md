@@ -13,4 +13,8 @@ The following files contain the code you should be concerned with:
     /CatoptricServer/src/main/java/codes/recursive/controller/DefaultController.java
     ```
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/ResearchCode/CatoptricAPI/CatoptricServer/src/main/java/JNI
+Before run:
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/ResearchCode/catoptric_cpp
+
+Testing move:
+curl -X POST -H "Content-Type: application/json" -d '{"motor": 1, "steps": 1, "row": 1, "column": "2", "surface": "0"}' http://localhost:8080/move

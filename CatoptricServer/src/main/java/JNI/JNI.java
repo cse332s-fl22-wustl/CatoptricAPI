@@ -5,8 +5,7 @@ public class JNI {
         System.loadLibrary("catoptric_cpp"); // Load native library libcatoptric_cpp.so (Unixes)
                                      // This library contains a native method called test()
      }
-    private native void test();
-    public void testing() {
-        this.test();
-    }
+    public native void test();
+    public native void quit();
+    public native void reset();
 }

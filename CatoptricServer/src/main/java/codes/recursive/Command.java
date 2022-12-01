@@ -3,44 +3,44 @@ import io.micronaut.core.annotation.Introspected;
 
 @Introspected
 public class Command {
-    private String motor;
-    private String steps;
-    private String row;
-    private String column;
-    private String surface;
+    private int motor;
+    private int steps;
+    private int row;
+    private int column;
+    private int surface;
 
-    public String getRow() {
+    public int getRow() {
         return row;
     }
-    public void setRow(String row) {
+    public void setRow(int row) {
         this.row = row;
     }
 
-    public String getColumn() {
+    public int getColumn() {
         return column;
     }
-    public void setColumn(String column) {
+    public void setColumn(int column) {
         this.column = column;
     }
 
-    public String getSurface() {
+    public int getSurface() {
         return surface;
     }
-    public void setsurface(String surface) {
+    public void setsurface(int surface) {
         this.surface = surface;
     }
 
-    public String getMotor() {
+    public int getMotor() {
         return motor;
     }
-    public void setMotor(String motor) {
+    public void setMotor(int motor) {
         this.motor = motor;
     }
 
-    public String getSteps() {
+    public int getSteps() {
         return steps;
     }
-    public void setSteps(String steps) {
+    public void setSteps(int steps) {
         this.steps = steps;
     }
 

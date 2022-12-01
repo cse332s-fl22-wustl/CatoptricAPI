@@ -13,10 +13,11 @@ import codes.recursive.Command;
 
 @Controller("/")
 public class DefaultController {
+    JNI jni = new JNI();
 
     @Get(value="test", produces = MediaType.APPLICATION_JSON)
     public HttpResponse<Map<String, Object>> test() throws IOException{
-        new JNI().testing();
+        jni.test();
         return HttpResponse.ok(
             CollectionUtils.mapOf(
                     "status", 0
@@ -26,6 +27,7 @@ public class DefaultController {
 
     @Get(value="quit", produces = MediaType.APPLICATION_JSON)
     public HttpResponse<Map<String, Object>> quit() throws IOException{
+        jni.quit();
         return HttpResponse.ok(
                 CollectionUtils.mapOf(
                         "status", 0
@@ -35,6 +37,7 @@ public class DefaultController {
 
     @Get(value="reset", produces = MediaType.APPLICATION_JSON)
     public HttpResponse<Map<String, Object>> reset() throws IOException{
+        jni.reset();
         return HttpResponse.ok(
                 CollectionUtils.mapOf(
                         "status", 0
@@ -45,11 +48,11 @@ public class DefaultController {
     @Post(value = "move", consumes = MediaType.APPLICATION_JSON, produces = MediaType.APPLICATION_JSON)
     public HttpResponse<Map<String, Object>> move(Command command) throws IOException{
 
-        String motor = command.getMotor();
-        String steps = command.getSteps();
-        String row = command.getRow();
-        String column = command.getColumn();
-        String surface = command.getSurface();
+        int motor = command.getMotor();
+        int steps = command.getSteps();
+        int row = command.getRow();
+        int column = command.getColumn();
+        int surface = command.getSurface();
 
         return HttpResponse.ok(
                 CollectionUtils.mapOf(
