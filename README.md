@@ -12,3 +12,5 @@ The following files contain the code you should be concerned with:
     ```
     /CatoptricServer/src/main/java/codes/recursive/controller/DefaultController.java
     ```
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/ResearchCode/CatoptricAPI/CatoptricServer/src/main/java/JNI
