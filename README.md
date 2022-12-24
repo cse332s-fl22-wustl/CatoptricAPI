@@ -3,8 +3,9 @@ It should be used with appropriate hardware set up, for detail: see Professor Ch
 
 Before run:
 The API calls the C library of Catoptric CPP, so we must include Catoptric CPP's shared library into our LD Libraries:
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<path to the CatoptircAPI repo>
-
+    ```
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<path to the CatoptircAPI repo>
+    ```
 To Start the server:
     ```
     cd CatoptricServer
