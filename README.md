@@ -6,6 +6,7 @@ The API calls the C library of Catoptric CPP, so we must include Catoptric CPP's
     ```
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<path to the CatoptircAPI repo>
     ```
+    
 To Start the server:
     ```
     cd CatoptricServer
