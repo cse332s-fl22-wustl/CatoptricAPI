@@ -29,5 +29,5 @@ The following files contain the code you should be concerned with:
 https://www3.ntu.edu.sg/home/ehchua/programming/java/javanativeinterface.html
 
 
-Testing move:
+# To test move APL:
 curl -X POST -H "Content-Type: application/json" -d '{"motor": 1, "position": 1, "row": 1, "column": "2", "surface": "0"}' http://localhost:8080/move
